@@ -222,19 +222,23 @@
   </joint>
 
   <gazebo reference="chassis">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Indigo</material>
   </gazebo>
 
   <gazebo reference="left_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Turquoise</material>
   </gazebo>
 
   <gazebo reference="right_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Turquoise</material>
   </gazebo>
 
   <gazebo reference="camera">
-    <material>Gazebo/Yellow</material>
+    <material>Gazebo/RedGlow</material>
+  </gazebo>
+  
+  <gazebo reference="hokuyo">
+    <material>Gazebo/DarkMagentaTransparent</material>
   </gazebo>
 
 </robot>
