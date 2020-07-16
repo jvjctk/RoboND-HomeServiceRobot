@@ -128,7 +128,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/workspace/RoboND-WhereAmI-/build/gtest/cmake_install.cmake")
   include("/home/workspace/RoboND-WhereAmI-/build/my_robot/cmake_install.cmake")
   include("/home/workspace/RoboND-WhereAmI-/build/ball_chaser/cmake_install.cmake")
-  include("/home/workspace/RoboND-WhereAmI-/build/pgm_map_creator/cmake_install.cmake")
 
 endif()
 
