@@ -35,7 +35,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 ## rtab visualization
 
-rtabmap-databaseViewer <path to database file>
+rtabmap-databaseViewer '<path to database file>'
   
 ## database split and join
   
