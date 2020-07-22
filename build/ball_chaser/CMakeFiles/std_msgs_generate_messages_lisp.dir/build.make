@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/RoboND-WhereAmI-/src
+CMAKE_SOURCE_DIR = /home/workspace/RoboND-MapMyWorld/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/RoboND-WhereAmI-/build
+CMAKE_BINARY_DIR = /home/workspace/RoboND-MapMyWorld/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/build: std_msgs_gener
 .PHONY : ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/workspace/RoboND-WhereAmI-/build/ball_chaser && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/workspace/RoboND-MapMyWorld/build/ball_chaser && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/workspace/RoboND-WhereAmI-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/workspace/RoboND-WhereAmI-/src /home/workspace/RoboND-WhereAmI-/src/ball_chaser /home/workspace/RoboND-WhereAmI-/build /home/workspace/RoboND-WhereAmI-/build/ball_chaser /home/workspace/RoboND-WhereAmI-/build/ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/workspace/RoboND-MapMyWorld/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/workspace/RoboND-MapMyWorld/src /home/workspace/RoboND-MapMyWorld/src/ball_chaser /home/workspace/RoboND-MapMyWorld/build /home/workspace/RoboND-MapMyWorld/build/ball_chaser /home/workspace/RoboND-MapMyWorld/build/ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ball_chaser/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 

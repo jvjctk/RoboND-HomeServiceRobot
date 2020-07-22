@@ -1,4 +1,4 @@
-prefix=/home/workspace/RoboND-WhereAmI-/install
+prefix=/home/workspace/RoboND-MapMyWorld/install
 
 Name: ball_chaser
 Description: Description of ball_chaser

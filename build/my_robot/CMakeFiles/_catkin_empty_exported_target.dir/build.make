@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/workspace/RoboND-WhereAmI-/src
+CMAKE_SOURCE_DIR = /home/workspace/RoboND-MapMyWorld/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/workspace/RoboND-WhereAmI-/build
+CMAKE_BINARY_DIR = /home/workspace/RoboND-MapMyWorld/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ my_robot/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_expor
 .PHONY : my_robot/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 my_robot/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/workspace/RoboND-WhereAmI-/build/my_robot && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/workspace/RoboND-MapMyWorld/build/my_robot && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : my_robot/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 my_robot/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/workspace/RoboND-WhereAmI-/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/workspace/RoboND-WhereAmI-/src /home/workspace/RoboND-WhereAmI-/src/my_robot /home/workspace/RoboND-WhereAmI-/build /home/workspace/RoboND-WhereAmI-/build/my_robot /home/workspace/RoboND-WhereAmI-/build/my_robot/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/workspace/RoboND-MapMyWorld/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/workspace/RoboND-MapMyWorld/src /home/workspace/RoboND-MapMyWorld/src/my_robot /home/workspace/RoboND-MapMyWorld/build /home/workspace/RoboND-MapMyWorld/build/my_robot /home/workspace/RoboND-MapMyWorld/build/my_robot/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : my_robot/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

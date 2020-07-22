@@ -1,0 +1,7 @@
+split a database
+
+		split -b 40M rtabmap.db rtab.
+        
+combine files
+
+		cat rtab.?? > rtabmap.db

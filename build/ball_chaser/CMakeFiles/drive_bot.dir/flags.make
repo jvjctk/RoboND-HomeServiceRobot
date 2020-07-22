@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ball_chaser\"
 
-CXX_INCLUDES = -I/home/workspace/RoboND-WhereAmI-/devel/include -I/home/workspace/RoboND-WhereAmI-/src/ball_chaser/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/workspace/RoboND-MapMyWorld/devel/include -I/home/workspace/RoboND-MapMyWorld/src/ball_chaser/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 
