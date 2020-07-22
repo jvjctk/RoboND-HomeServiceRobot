@@ -1,4 +1,4 @@
-# RoboND-Where Am I
+# RoboND-Map My World
 
 This is the project library of fourth project of udacity robotics software nano degree. The project is developed to make a simulation of world and robot. Simulated robot have to be navigated manually to develop customized map
 
