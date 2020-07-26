@@ -1,2 +1,2 @@
 ball_chaser:my_robot:teleop_twist_keyboard
--DCATKIN_DEVEL_PREFIX=/home/workspace/RoboND-MapMyWorld/devel -DCMAKE_INSTALL_PREFIX=/home/workspace/RoboND-MapMyWorld/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/workspace/RoboND-HomeServiceRobot/devel -DCMAKE_INSTALL_PREFIX=/home/workspace/RoboND-HomeServiceRobot/install -G Unix Makefiles

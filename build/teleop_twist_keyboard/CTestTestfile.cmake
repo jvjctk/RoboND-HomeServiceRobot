@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/workspace/RoboND-MapMyWorld/src/teleop_twist_keyboard
-# Build directory: /home/workspace/RoboND-MapMyWorld/build/teleop_twist_keyboard
+# Source directory: /home/workspace/RoboND-HomeServiceRobot/src/teleop_twist_keyboard
+# Build directory: /home/workspace/RoboND-HomeServiceRobot/build/teleop_twist_keyboard
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

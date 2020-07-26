@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "teleop_twist_keyboard"
-PROJECT_SPACE_DIR = "/home/workspace/RoboND-MapMyWorld/install"
+PROJECT_SPACE_DIR = "/home/workspace/RoboND-HomeServiceRobot/install"
 PROJECT_VERSION = "1.0.0"

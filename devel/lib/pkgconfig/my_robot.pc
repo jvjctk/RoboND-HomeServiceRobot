@@ -1,4 +1,4 @@
-prefix=/home/workspace/RoboND-MapMyWorld/devel
+prefix=/home/workspace/RoboND-HomeServiceRobot/devel
 
 Name: my_robot
 Description: Description of my_robot
