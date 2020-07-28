@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/workspace/RoboND-HomeServiceRobot/devel:$CMAKE_PREFIX_PATH"
 export PWD="/home/workspace/RoboND-HomeServiceRobot/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/workspace/RoboND-HomeServiceRobot/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/workspace/RoboND-HomeServiceRobot/src:$ROS_PACKAGE_PATH"
