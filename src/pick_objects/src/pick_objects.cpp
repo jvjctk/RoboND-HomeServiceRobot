@@ -7,7 +7,7 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 
 int main(int argc, char** argv){
   // Initialize the simple_navigation_goals node
-  ros::init(argc, argv, "simple_navigation_goals");
+  ros::init(argc, argv,  "pick_objects");
 
   //tell the action client that we want to spin a thread by default
   MoveBaseClient ac("move_base", true);
@@ -26,8 +26,10 @@ int main(int argc, char** argv){
   roboPick.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  roboPick.target_pose.pose.position.x = 1.0;
-  roboPick.target_pose.pose.orientation.w = 1.0;
+  roboPick.target_pose.pose.position.x = -4.0;
+  roboPick.target_pose.pose.position.y = -2.0;
+  roboPick.target_pose.pose.orientation.z = 1.0;
+  roboPick.target_pose.pose.orientation.w = 0.0;
 
    // Send the goal position and orientation for the robot to reach
   ROS_INFO("Sending pick location");
@@ -37,8 +39,11 @@ int main(int argc, char** argv){
   ac.waitForResult();
 
   // Check if the robot reached its pick location
-  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {    
     ROS_INFO("Hooray, robo has started his journey to pick");
+  	ros::Duration(5).sleep();
+    ROS_INFO("Hooray, robo has picked up");
+  	}
   else
     ROS_INFO("The base failed to move forward 1 meter for some reason");
   
@@ -51,8 +56,10 @@ int main(int argc, char** argv){
   roboDrop.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
-  roboDrop.target_pose.pose.position.x = 1.0;
-  roboDrop.target_pose.pose.orientation.w = 1.0;
+  roboDrop.target_pose.pose.position.x = 4.4;
+  roboDrop.target_pose.pose.position.y = -0.8;
+  roboDrop.target_pose.pose.orientation.z = 0.0;
+  roboDrop.target_pose.pose.orientation.w = 0.4;
 
    // Send the drop position and orientation for the robot to reach
   ROS_INFO("Sending drop location");

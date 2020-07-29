@@ -2,36 +2,42 @@
 #include <visualization_msgs/Marker.h>
 #include <geometry_msgs/Twist.h>
 #include <geometry_msgs/Pose.h>
-#include <nav_msgs/Odometry.h>
+#include <geometry_msgs/PoseWithCovarianceStamped.h>
 
 geometry_msgs::Pose RoboPick;
 geometry_msgs::Pose RoboDrop;
 bool roboStatus = true;
+bool roboPicked = false;
 visualization_msgs::Marker marker;
 visualization_msgs::Marker roboMarker;
 ros::Publisher marker_pub;
 
 
-void odomCallback(const nav_msgs::Odometry::ConstPtr& msg) {
+void amclCallback(const geometry_msgs::PoseWithCovarianceStamped::ConstPtr& msg) {
     
-    const bool roboPicking = (abs(RoboPick.position.x - msg->pose.pose.position.x) + abs(RoboPick.position.y - msg->pose.pose.position.y)) < 1;
-    const bool roboDroping = (abs(RoboDrop.position.x - msg->pose.pose.position.x) + abs(RoboDrop.position.y - msg->pose.pose.position.y)) < 2;
+    const bool roboPicking = (abs(RoboPick.position.x - msg->pose.pose.position.x) < 1) && (abs(RoboPick.position.y - msg->pose.pose.position.y) < 1);
+  	const bool roboDroping = (abs(RoboDrop.position.x - msg->pose.pose.position.x) < 1) && (abs(RoboDrop.position.y - msg->pose.pose.position.y) < 1);
 
     if(roboStatus){
+      	roboStatus = false;
+      	marker.action = visualization_msgs::Marker::ADD;
         marker_pub.publish(marker);
+      	ROS_INFO("adding virtual object at pick target position");
      }
 
-    if(roboPicking){
-        roboStatus = false;
+    if(roboPicking && !roboPicked){      	      	
         sleep(5);
+      	ROS_INFO("Removing virtual object at pick target position");
         marker.action = visualization_msgs::Marker::DELETE;
-        marker_pub.publish(marker);
+      	marker_pub.publish(marker);
+      	roboPicked = true;
     	}
-    else if(roboDroping){
-        sleep(5);
-        roboMarker.action = visualization_msgs::Marker::ADD;
+  
+    if(roboDroping && roboPicked){
+      	sleep(5);
+    	ROS_INFO("adding virtual object at drop target position");      	
         marker_pub.publish(roboMarker);
-    }
+    	}
 }
 
 
@@ -42,12 +48,12 @@ int main( int argc, char** argv )
   ros::Rate r(1);
   marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
   
-  RoboPick.position.x = -0.5; // ###
-  RoboPick.position.y = -7.0; // ###
-  RoboDrop.position.x = -7.0; // ###
-  RoboDrop.position.y = -5.5; // ###
+  RoboPick.position.x = -4.0;
+  RoboPick.position.y = -2.0; 
+  RoboDrop.position.x = 4.4;
+  RoboDrop.position.y = -0.8;
   
-  ros::Subscriber marker_sub = n.subscribe("/odom",1000,odomCallback);
+  ros::Subscriber marker_sub = n.subscribe("/amcl_pose",1000, amclCallback);
   
   // Set our initial shape type to be a cube
   uint32_t shape = visualization_msgs::Marker::SPHERE; // ###
@@ -64,7 +70,7 @@ int main( int argc, char** argv )
   marker.type = shape;
 
   // Set the marker action.  Options are ADD, DELETE, and new in ROS Indigo: 3 (DELETEALL)
-  marker.action = visualization_msgs::Marker::ADD;
+  //marker.action = visualization_msgs::Marker::ADD;
 
   // Set the scale of the marker -- 1x1x1 here means 1m on a side
   marker.scale.x = 1.0;
@@ -86,8 +92,6 @@ int main( int argc, char** argv )
   roboMarker.id = 1;
   roboMarker.pose.position.x = RoboDrop.position.x;
   roboMarker.pose.position.y = RoboDrop.position.y;
-
-  marker_pub.publish(marker);
 
   while(ros::ok()){
       ros::spinOnce();
