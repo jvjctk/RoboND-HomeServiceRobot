@@ -35,17 +35,17 @@ int main(int argc, char** argv){
   ROS_INFO("Sending pick location");
   ac.sendGoal(roboPick);
 
+  ROS_INFO("Hooray, robo has started his journey to pick");  
   // Wait an infinite time for the results
-  ac.waitForResult();
-
+  ac.waitForResult();      
+  
   // Check if the robot reached its pick location
-  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {    
-    ROS_INFO("Hooray, robo has started his journey to pick");
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
   	ros::Duration(5).sleep();
     ROS_INFO("Hooray, robo has picked up");
   	}
   else
-    ROS_INFO("The base failed to move forward 1 meter for some reason");
+    ROS_INFO("Sorry, robo failed to pick");
   
    // ##### commands to drop
   
@@ -64,16 +64,16 @@ int main(int argc, char** argv){
    // Send the drop position and orientation for the robot to reach
   ROS_INFO("Sending drop location");
   ac.sendGoal(roboDrop);
-
+    
+  ROS_INFO("Hooray, robo has started his journey to drop");
   // Wait an infinite time for the results
   ac.waitForResult();
 
   // Check if the robot reached its pick location
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-    ROS_INFO("Hooray, robo has started his journey to drop");
+    ROS_INFO("Hooray, robo has droped");
   else
-    ROS_INFO("The base failed to move forward 1 meter for some reason");
-
+    ROS_INFO("Sorry, robo failed to pick");
   
   return 0;
 }
