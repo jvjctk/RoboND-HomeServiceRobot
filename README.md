@@ -6,7 +6,7 @@ This is the project library of fourth project of udacity robotics software nano 
 
 This workspace is fully developed with gazebo workspace. Output is given below
 
-![alt text](output/rtab.png)
+![alt text](output/output.gif)
 
 
 ## launch commands
