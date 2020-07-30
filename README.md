@@ -68,8 +68,8 @@ add_markers node creates virtual objects in the rviz for better visualization. A
 
 		sudo apt-get update && apt-get upgrade
 		sudo pat-get install xterm
-        cd path_to_cloned_repository
-        cd src/scripts
-        chmod -x path_to_required_shell_script.sh
-        ./path_to_required_shell_script.sh
+		cd path_to_cloned_repository
+		cd src/scripts
+		chmod -x path_to_required_shell_script.sh
+		./path_to_required_shell_script.sh
 
